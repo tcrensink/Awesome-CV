@@ -1,13 +1,13 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for Cover Letter
+% Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
 %
-% Authors:
+% Author:
 % Claud D. Park <posquit0.bj@gmail.com>
-% Lars Richter <mail@ayeks.de>
+% http://www.posquit0.com
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -42,7 +42,6 @@
 
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
-\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -53,18 +52,16 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-%\photo[circle,noedge,left]{./profile}
-\name{Thomas C.}{Rensink}
-\position{Physics Ph.D. {\enskip\cdotp\enskip}Machine Learning Engineer}
-\address{420 Fairmount Ave. \#3, Oakland CA}
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Byungjin}{Park}
+\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
+\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
 
-\mobile{612.720.9205}
-\email{thomas.rensink@gmail.com}
-% \homepage{https://tcrensink.github.io/project_portfolio/}
-% \github{posquit0}
-% \github{posquit0}
-% \linkedin{posquit0}
-% \linkedin{posquit0}
+\mobile{(+82) 10-9030-1843}
+\email{posquit0.bj@gmail.com}
+\homepage{www.posquit0.com}
+\github{posquit0}
+\linkedin{posquit0}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -72,64 +69,37 @@
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
 
-%\quote{``Be the change that you want to see in the world."}
+\quote{``Be the change that you want to see in the world."}
 
-
-%-------------------------------------------------------------------------------
-%	LETTER INFORMATION
-%	All of the below lines must be filled out
-%-------------------------------------------------------------------------------
-% The company being applied to
-\recipient
-  {?? [Person/team to address]}
-  {?? [Company address]}
-% The date on the letter, default is the date of compilation
-\letterdate{\today}
-% The title of the letter
-\lettertitle{Position: ??}
-% How the letter is opened
-\letteropening{Dear ??,}
-% How the letter is closed
-\letterclosing{Sincerely,}
-% Any enclosures with the letter
-\letterenclosure[Attached]{Curriculum Vitae}
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Thomas C. Rensink~~~·~~~Cover Letter}
-  {}
-
-% Print the title with above letter informations
-\makelettertitle
-
-%-------------------------------------------------------------------------------
-%	LETTER CONTENT
-%-------------------------------------------------------------------------------
-\begin{cvletter}
-
-\lettersection{About Me}
-
-
-\lettersection{Why [Company]???}
-
-
-\lettersection{Why Me?}
-
-
-\end{cvletter}
+  {Claud D. Park~~~·~~~Résumé}
+  {\thepage}
 
 
 %-------------------------------------------------------------------------------
-% Print the signature and enclosures with above letter informations
-\makeletterclosing
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+\input{resume/honors.tex}
+\input{resume/presentation.tex}
+\input{resume/writing.tex}
+\input{resume/committees.tex}
+\input{resume/education.tex}
+\input{resume/extracurricular.tex}
 
+
+%-------------------------------------------------------------------------------
 \end{document}
